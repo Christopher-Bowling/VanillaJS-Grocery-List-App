@@ -33,9 +33,21 @@ const itemController = (() => {
 
         deleteItem: (ID) => {
             // delete item from allItems
-        }
+            let arrCopy, delItemIndex;
 
-        // deleteItem: (id) => { };
+            arrCopy = allItems;
+
+            delItemIndex = arrCopy.map((i) => {
+                return i.id;
+            })
+            .indexOf(ID);
+
+            arrCopy.splice(delItemIndex, 1);
+
+            allItems = arrCopy;
+
+
+        }
     }
 })();
 
@@ -72,7 +84,7 @@ const UIController = (() => {
             html = `
                     <div class="grocery-item" id="item${ID}">
                         <h4>${name}</h4>
-                        <i class="fas fa-times ml-5 btn btn-outline-dark" id="btn${ID}"></i>
+                        <i class="fas fa-times ml-5 btn btn-danger" id="btn${ID}"></i>
                     </div>
                     `
             document.querySelector(DOMelements.itemsContainer).insertAdjacentHTML('beforeend', html);
@@ -82,6 +94,7 @@ const UIController = (() => {
         deleteListItem: (ID) => {
             const itemID = `item${ID}`
             // delete Item from UI
+            document.getElementById(itemID).remove();
 
 
         },
@@ -119,7 +132,7 @@ const appController = ((itemCtrl, UICtrl) => {
     }
 
     const itemEventListener = (item) => {
-        document.querySelector(`#btn${item.id}`).addEventListener('click', ctrlDeleteItem(item.id));
+        document.querySelector(`#btn${item.id}`).addEventListener('click', () => ctrlDeleteItem(item.id));
     }
 
     const ctrlAddItem = () => {

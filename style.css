@@ -1,0 +1,43 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+#titleBanner {
+    background: -moz-linear-gradient(328deg, rgba(59,167,255,1) 0%, rgba(96,183,255,1) 19%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(59,167,255,1)), color-stop(19%, rgba(96,183,255,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(328deg, rgba(59,167,255,1) 0%, rgba(96,183,255,1) 19%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(328deg, rgba(59,167,255,1) 0%, rgba(96,183,255,1) 19%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(328deg, rgba(59,167,255,1) 0%, rgba(96,183,255,1) 19%, rgba(255,255,255,1) 100%); /* ie10+ */
+    background: linear-gradient(122deg, rgba(59,167,255,1) 0%, rgba(96,183,255,1) 19%, rgba(255,255,255,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3BA7FF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */
+    color: white;
+}
+
+#addItem {
+    margin: 0;
+    background-color: rgba(0,0,0, .75);
+    color: white;
+}
+
+#addItem:hover {
+    background-color: rgba(0,0,0, .70)
+}
+
+.form-control {
+    border: 1px solid black;
+}
+
+.grocery-item {
+    background-color: #f8f8f8;
+    border: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.grocery-item:hover {
+    background-color: rgba(174, 174, 174, .15);
+}

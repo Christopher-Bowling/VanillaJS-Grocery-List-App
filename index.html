@@ -7,37 +7,15 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d9899d1337.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-
-        .btn-block {
-            margin: 0;
-        }
-
-        .form-control {
-            border: 2px solid black;
-        }
-
-        .grocery-item {
-            background-color: #f8f8f8;
-            border: 2px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 40px;
-            padding-right: 40px;
-            width: 100%;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    <div class="row bg-info text-white display-4 d-flex justify-content-center">Grocery List</div>
+    <div id="titleBanner" class="row display-4 d-flex justify-content-center">Grocery List</div>
     <input id="input" class="form-control" type="text" placeholder="Enter Item" autofocus/>
-    <div id="addItem" class="row btn btn-info btn-block display-4">
+    <div id="addItem" class="row btn btn-block display-4">
         <span><i class="fas fa-plus display-5"></i></span>
         <span class="display-5">Add Item</span>
     </div>
@@ -48,7 +26,6 @@
         </div> -->
     </div>
     
-
     <script src="App.js"></script>
 </body>
 </html>
